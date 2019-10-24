@@ -91,9 +91,9 @@ describe("basics", function() {
             // write all the zeros.
             // Write it as a string so that the .length property can be checked.
             // ✏️ EDIT NEXT LINE ✏️
-            const bigNumber = "...";
+            const bigNumber = "1e9";
             ////////////////////////////////////////////////////////////////////
-
+            
             expect(typeof bigNumber).to.equal("string");
             expect(bigNumber.length).to.equal(3);
             // Number(bigNumber) casts bigNumber from a string to a number
