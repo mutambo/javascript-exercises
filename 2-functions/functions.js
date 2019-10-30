@@ -40,8 +40,9 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
-            ////////////////////////////////////////////////////////////////////
+            const otherFunction = () => {}
+            myFunction = otherFunction
+             ////////////////////////////////////////////////////////////////////
 
             if (myFunction !== otherFunction) {
                 throw new Error(
@@ -57,7 +58,7 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ EDIT LINE BELOW ✏️
-            myFunction(); // why is myFunction not callable?
+             const a = function a() {}; // why is myFunction not callable?
             ////////////////////////////////////////////////////////////////////
         });
     });
@@ -72,7 +73,7 @@ describe("functions", function() {
             // Declare a constant 'answer' with the correct result.
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
-
+            const answer = getContext();
             ////////////////////////////////////////////////////////////////////
 
             const result = getContext(); // <--- called without explicit context
@@ -96,7 +97,9 @@ describe("functions", function() {
             // and 'answerThirdResult' with the correct results.
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
-
+            const answerFirstResult = getContext()
+            const answerSecondResult = getContext.call(context)
+            const answerThirdResult = getContext()
             ////////////////////////////////////////////////////////////////////
 
             // First we call the function without an explicit context
@@ -134,7 +137,8 @@ describe("functions", function() {
             // and 'answerSecondResult' with the correct results.
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
-
+            const answerFirstResult =object
+            const answerSecondResult = differentObject
             ////////////////////////////////////////////////////////////////////
 
             // First we call the function on an object
