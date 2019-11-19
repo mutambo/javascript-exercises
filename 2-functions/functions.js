@@ -532,7 +532,13 @@ describe("functions", function() {
             // - stores the result of 'fn' in an array at the current position
             // - returns the array with results in the end
             // ✏️ ADD CODE HERE ✏️
-
+            function map(fn, arr){
+                const result= new Array(arr.length);
+                for (let i = 0; i< arr.length; i++){
+                    xyz = fn(arr[1], i);
+                }
+                return result;
+            }
             ////////////////////////////////////////////////////////////////////
 
             let results;
