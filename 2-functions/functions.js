@@ -628,7 +628,7 @@ describe("functions", function() {
 
             // Now we're registering the service.handleEvent method so that
             // it will be called as soon as the event is emitted.
-            eventEmitter.addEventListener(service.handleEvent);
+            eventEmitter.addEventListener(service.handleEvent.bind(service));
             // Now let's emit the event. However, this will fail.
             // Find the reason why and fix it.
             eventEmitter.emit();
@@ -668,6 +668,7 @@ describe("functions", function() {
             };
 
             // Now this time we've done it right: we .bind() the event handler before passing it to addEventListener().
+            service.handleEvent = service.handleEvent.bind(service)
             eventEmitter.addEventListener(service.handleEvent.bind(service));
             // But this will fail with an error. Apparently, the given listener is not stored in the 'listeners' array.
             // Find the reason and fix it.
@@ -682,7 +683,7 @@ describe("functions", function() {
                     return function() {
                         this.doSomething();
                         this.doAnotherThing();
-                    };
+                    }.bind(this);
                 },
                 doSomething: function() {},
                 doAnotherThing: function() {}
