@@ -439,7 +439,9 @@ describe("functions", function() {
             // ✏️ ADD CODE HERE ✏️
 
             ////////////////////////////////////////////////////////////////////
-
+            function myFunction(func){
+                return func();
+            }
             // Now we're calling 'myFunction' and we're passing a function as an argument.
             const shouldBeA = myFunction(function() {
                 return "A";
